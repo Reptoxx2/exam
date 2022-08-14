@@ -81,36 +81,63 @@ body
     //height: 689px;
     height: fit-content;
     background-color: #de5d5d;
+    min-width: 0;
   }
   &__banner-slide
   {
     height: 100%;
-    position: absolute;
+    position: relative;
     z-index: 0;
-    .carousel-inner{
-      height: 100%;
-    }
-    .carousel-indicators
+    min-width: 0;
+    .slick-track
     {
-      padding-bottom: 33px;
-      padding-left: 4px;
-      li{
-        width: 13px;
-        height: 12px;
-        margin: 0;
-        margin-right: 2px;
+      display: flex;
+    }
+    .slick-list
+    {
+      overflow: hidden;
+      img
+      {
+        padding: 0 231px;
       }
     }
-    .item{
-      height: 100%;
-      img{
-        height: 100%;
+    .slick-dots
+    {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 56px;
+      font-size: 0;
+      transform: translateX(-50%);
+      left: calc(50% + 4px);
+      li{
+        list-style: none;
+        margin-right: 8px;
       }
-      padding-left: 230px;
+      .slick-active
+      {
+        button
+        {
+          width: 12px;
+          height: 12px;
+          background: #ffffff;
+          border: 1px solid #ffffff;
+          border-radius: 50%;
+        }
+      }
+      button{
+        width: 12px;
+        height: 12px;
+        background: transparent;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+      }
     }
   }
 
   &__banner-row {
+    margin-top: -690px;
     z-index: 1;
     width: 100%;
     height: 689px;
@@ -260,6 +287,7 @@ body
     display: flex;
     flex-direction: column;
     gap: 52px;
+    max-width: 100%;
     span
     {
       margin-left: -2px;
@@ -298,54 +326,59 @@ body
     letter-spacing: normal;
     line-height: 24px;
     text-align: left;
+    min-width: 0;
   }
-  &__share-slide{
-    position: relative;
-    .carousel-indicators
+  &__share-slider{
+    min-width: 0;
+    .slick-track
     {
-      position: absolute;
-      bottom: -61px;
-      left: 30px;
-      li
-      {
-       margin-right: 4px;
-      }
+      display: flex;
     }
-    height: 100%;
-    width: 100%;
-    .item{
-      .item-block{
-        padding-left: 2px;
+    .slick-list
+    {
+      overflow: hidden;
+      .item-block
+      {
         display: flex;
         flex-direction: row;
         gap: 30px;
-        img{
-          width: 170px;
-          height: 93px;
+        p{
+          margin-top: -6px;
+          letter-spacing: 0.1px;
+          width: 250px;
         }
       }
     }
-    .carousel-caption
+    .slick-dots
     {
-      max-height: 88px;
-      position: relative;
-      text-align: unset;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      padding-top: 0px;
-      p{
-        margin-top: -6px;
-        box-sizing: border-box;
-        width: 233px;
-        color: #aeaeae;
-        font-family: "Varela Round";
-        font-size: 16px;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: normal;
-        line-height: 24px;
-        max-height: 88px;
+      margin-top: 43px;
+      margin-left: 1px;
+      font-size: 0;
+      display: flex;
+      li{
+        list-style: none;
+        margin-right: 8px;
+        button
+        {
+          background: transparent;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 1px solid #ffffff;
+        }
+      }
+      .slick-active
+      {
+          list-style: none;
+          margin-right: 8px;
+          button
+          {
+            width: 12px;
+            height: 12px;
+            background: #ffffff;
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+        }
       }
     }
   }
@@ -408,64 +441,73 @@ body
     border-radius: 5px;
     background-color: #ffffff;
     display: flex;
-    .carousel-inner{
-      display: flex;
-      height: 100%;
+  }
+  &__features-slider {
+    max-width: 100%;
+    .slick-list{
+      overflow: hidden;
     }
-    .content__share-slide{
-      padding: 37px 0px 0px 30px;
-      .carousel-indicators
-      {
-        position: absolute;
-        bottom: -28px;
-        left: 62px;
-      }
-      max-width: 470px;
-      height: 189px;
-      .item{
-        width: 100%;
-        .item-block{
-          display: flex;
-          flex-direction: row;
-          div{
-            align-self: center;
-          }
-          img{
-            margin: 5px 0px 0px 0px;
-            padding: 0px;
-            width: 89px;
-            height: 89px;
-          }
+    .slick-dots
+    {
+      margin-top: 42px;
+      margin-left: 36px;
+      font-size: 0;
+      display: flex;
+      li{
+        list-style: none;
+        margin-right: 8px;
+        button
+        {
+          background: transparent;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 1px solid #ffffff;
         }
       }
-      .carousel-caption{
-        text-shadow: none;
-        height: 100%;
-        width: 100%;
-        p {
-          width: 100%;
-          height: fit-content;
-          color: #666666;
-          font-family: "Varela Round";
-          font-size: 16px;
-          font-weight: 400;
-          font-style: normal;
-          letter-spacing: normal;
-          line-height: 24px;
-          max-height: fit-content;
-          span{
-            margin-top: -8px;
-            margin-left: -5px;
-            display: block;
-            color: #cc5858;
-            font-family: Montserrat;
-            font-size: 18px;
-            font-weight: 700;
-            font-style: normal;
-            letter-spacing: -0.2px;
-            line-height: 24px;
-            margin-bottom: 8px;
-          }
+      .slick-active
+      {
+        list-style: none;
+        margin-right: 8px;
+        button
+        {
+          width: 12px;
+          height: 12px;
+          background: #ffffff;
+          border-radius: 50%;
+          border: 1px solid #ffffff;
+        }
+      }
+    }
+    .slick-track{
+      display: flex;
+    }
+    .item-block {
+      padding-top: 33px;
+      padding-left: 26px;
+      display: flex;
+      color: #262626;
+      img{
+        padding: 0;
+        padding-left: 6px;
+        padding-top: 11px;
+        padding-right: 27px;
+      }
+      p{
+        color: #666666;
+        font-size: 16px;
+        font-weight: 700;
+        padding-left: 3px;
+        letter-spacing: -0.3px;
+        line-height: 24px;
+        span{
+          font-size: 18px;
+          color: #de5d5d;
+          font-weight: 700;
+          letter-spacing: 0.2px;
+          display: block;
+          padding-bottom: 9px;
+          margin-left: -3px;
         }
       }
     }

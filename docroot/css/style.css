@@ -142,33 +142,53 @@ body {
   max-width: 100%;
   height: fit-content;
   background-color: #de5d5d;
+  min-width: 0;
 }
 .content__banner-slide {
   height: 100%;
-  position: absolute;
+  position: relative;
   z-index: 0;
+  min-width: 0;
 }
-.content__banner-slide .carousel-inner {
-  height: 100%;
+.content__banner-slide .slick-track {
+  display: flex;
 }
-.content__banner-slide .carousel-indicators {
-  padding-bottom: 33px;
-  padding-left: 4px;
+.content__banner-slide .slick-list {
+  overflow: hidden;
 }
-.content__banner-slide .carousel-indicators li {
-  width: 13px;
+.content__banner-slide .slick-list img {
+  padding: 0 231px;
+}
+.content__banner-slide .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 56px;
+  font-size: 0;
+  transform: translateX(-50%);
+  left: calc(50% + 4px);
+}
+.content__banner-slide .slick-dots li {
+  list-style: none;
+  margin-right: 8px;
+}
+.content__banner-slide .slick-dots .slick-active button {
+  width: 12px;
   height: 12px;
-  margin: 0;
-  margin-right: 2px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
 }
-.content__banner-slide .item {
-  height: 100%;
-  padding-left: 230px;
-}
-.content__banner-slide .item img {
-  height: 100%;
+.content__banner-slide .slick-dots button {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
 }
 .content__banner-row {
+  margin-top: -690px;
   z-index: 1;
   width: 100%;
   height: 689px;
@@ -288,6 +308,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 52px;
+  max-width: 100%;
 }
 .content__share-block span {
   margin-left: -2px;
@@ -320,51 +341,54 @@ body {
   letter-spacing: normal;
   line-height: 24px;
   text-align: left;
+  min-width: 0;
 }
-.content__share-slide {
-  position: relative;
-  height: 100%;
-  width: 100%;
+.content__share-slider {
+  min-width: 0;
 }
-.content__share-slide .carousel-indicators {
-  position: absolute;
-  bottom: -61px;
-  left: 30px;
+.content__share-slider .slick-track {
+  display: flex;
 }
-.content__share-slide .carousel-indicators li {
-  margin-right: 4px;
+.content__share-slider .slick-list {
+  overflow: hidden;
 }
-.content__share-slide .item .item-block {
-  padding-left: 2px;
+.content__share-slider .slick-list .item-block {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
-.content__share-slide .item .item-block img {
-  width: 170px;
-  height: 93px;
-}
-.content__share-slide .carousel-caption {
-  max-height: 88px;
-  position: relative;
-  text-align: unset;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-top: 0px;
-}
-.content__share-slide .carousel-caption p {
+.content__share-slider .slick-list .item-block p {
   margin-top: -6px;
-  box-sizing: border-box;
-  width: 233px;
-  color: #aeaeae;
-  font-family: "Varela Round";
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 24px;
-  max-height: 88px;
+  letter-spacing: 0.1px;
+  width: 250px;
+}
+.content__share-slider .slick-dots {
+  margin-top: 43px;
+  margin-left: 1px;
+  font-size: 0;
+  display: flex;
+}
+.content__share-slider .slick-dots li {
+  list-style: none;
+  margin-right: 8px;
+}
+.content__share-slider .slick-dots li button {
+  background: transparent;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+}
+.content__share-slider .slick-dots .slick-active {
+  list-style: none;
+  margin-right: 8px;
+}
+.content__share-slider .slick-dots .slick-active button {
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
 }
 .content__features-wrap {
   background: #313131;
@@ -420,65 +444,71 @@ body {
   background-color: #ffffff;
   display: flex;
 }
-.content__features-part2 .carousel-inner {
+.content__features-slider {
+  max-width: 100%;
+}
+.content__features-slider .slick-list {
+  overflow: hidden;
+}
+.content__features-slider .slick-dots {
+  margin-top: 42px;
+  margin-left: 36px;
+  font-size: 0;
   display: flex;
-  height: 100%;
 }
-.content__features-part2 .content__share-slide {
-  padding: 37px 0px 0px 30px;
-  max-width: 470px;
-  height: 189px;
+.content__features-slider .slick-dots li {
+  list-style: none;
+  margin-right: 8px;
 }
-.content__features-part2 .content__share-slide .carousel-indicators {
-  position: absolute;
-  bottom: -28px;
-  left: 62px;
+.content__features-slider .slick-dots li button {
+  background: transparent;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
 }
-.content__features-part2 .content__share-slide .item {
-  width: 100%;
+.content__features-slider .slick-dots .slick-active {
+  list-style: none;
+  margin-right: 8px;
 }
-.content__features-part2 .content__share-slide .item .item-block {
+.content__features-slider .slick-dots .slick-active button {
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+}
+.content__features-slider .slick-track {
   display: flex;
-  flex-direction: row;
 }
-.content__features-part2 .content__share-slide .item .item-block div {
-  align-self: center;
+.content__features-slider .item-block {
+  padding-top: 33px;
+  padding-left: 26px;
+  display: flex;
+  color: #262626;
 }
-.content__features-part2 .content__share-slide .item .item-block img {
-  margin: 5px 0px 0px 0px;
-  padding: 0px;
-  width: 89px;
-  height: 89px;
+.content__features-slider .item-block img {
+  padding: 0;
+  padding-left: 6px;
+  padding-top: 11px;
+  padding-right: 27px;
 }
-.content__features-part2 .content__share-slide .carousel-caption {
-  text-shadow: none;
-  height: 100%;
-  width: 100%;
-}
-.content__features-part2 .content__share-slide .carousel-caption p {
-  width: 100%;
-  height: fit-content;
+.content__features-slider .item-block p {
   color: #666666;
-  font-family: "Varela Round";
   font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 24px;
-  max-height: fit-content;
-}
-.content__features-part2 .content__share-slide .carousel-caption p span {
-  margin-top: -8px;
-  margin-left: -5px;
-  display: block;
-  color: #cc5858;
-  font-family: Montserrat;
-  font-size: 18px;
   font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.2px;
+  padding-left: 3px;
+  letter-spacing: -0.3px;
   line-height: 24px;
-  margin-bottom: 8px;
+}
+.content__features-slider .item-block p span {
+  font-size: 18px;
+  color: #de5d5d;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  display: block;
+  padding-bottom: 9px;
+  margin-left: -3px;
 }
 .content__taken-wrap {
   background: #ffffff;
