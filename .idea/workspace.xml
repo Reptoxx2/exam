@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c336054b-7658-4bc6-b603-8c4240d9f122" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docroot/css/null.css" beforeDir="false" afterPath="$PROJECT_DIR$/docroot/css/null.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docroot/css/null.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/docroot/css/null.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/docroot/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docroot/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/docroot/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docroot/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docroot/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/docroot/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docroot/scss/null.scss" beforeDir="false" afterPath="$PROJECT_DIR$/docroot/scss/null.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docroot/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/docroot/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +56,8 @@
       <workItem from="1660764232342" duration="2958000" />
       <workItem from="1660825219645" duration="6746000" />
       <workItem from="1661085088761" duration="606000" />
+      <workItem from="1661099241661" duration="46000" />
+      <workItem from="1661155349623" duration="599000" />
     </task>
     <servers />
   </component>
