@@ -151,7 +151,7 @@ body {
 }
 .content__banner-slide .slick-track .slide__item {
   transition: 1s;
-  opacity: 0;
+  opacity: 1;
 }
 .content__banner-slide .slick-track .slick-active {
   opacity: 1;
